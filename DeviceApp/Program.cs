@@ -8,13 +8,13 @@ namespace DeviceApp
 {
     class Program
     {
-        private static DeviceClient deviceclitent = DeviceClient.CreateFromConnectionString("HostName=ec-win20-samuelw-iothub.azure-devices.net;DeviceId=DeviceApp;SharedAccessKey=1PoRNau16h+eqaQOX4BbIbPenmV6UukCFOM6X2wiQKc=", TransportType.Mqtt);
-        private static int telemetryInterval = 5;
+        private static DeviceClient deviceclient = DeviceClient.CreateFromConnectionString("HostName=ec-win20-samuelw-iothub.azure-devices.net;DeviceId=inlamningsuppgift5;SharedAccessKey=hh5F4vDEHpSo1C4hw2ozjGMda61nVWpFgFhAvXx9ThA=", TransportType.Mqtt);
+        private static int telemetryInterval = 10;
         private static Random rnd = new Random();
 
         static void Main(string[] args)
         {
-            deviceclitent.SetMethodHandlerAsync("SetTelemetryInterval", SetTelemetryInterval, null).Wait();
+            deviceclient.SetMethodHandlerAsync("SetTelemetryInterval", SetTelemetryInterval, null).Wait();
             SendMessagAsync().GetAwaiter();
 
             Console.ReadKey();
@@ -57,7 +57,7 @@ namespace DeviceApp
                 var payload = new Message(Encoding.UTF8.GetBytes(json));
                 payload.Properties.Add("temperatureAlert", (temp > 30) ? "true" : "false");
 
-                await deviceclitent.SendEventAsync(payload);
+                await deviceclient.SendEventAsync(payload);
                 Console.WriteLine($"Message sent: {json}");
 
                 await Task.Delay(telemetryInterval * 1000);

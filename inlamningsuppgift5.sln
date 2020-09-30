@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp", "DeviceApp\DeviceApp.csproj", "{E30218AF-A3C5-4B1C-92C0-60AF98DE567D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceApp", "DeviceApp\DeviceApp.csproj", "{E30218AF-A3C5-4B1C-92C0-60AF98DE567D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceApp", "ServiceApp\ServiceApp.csproj", "{33A414F0-7E99-4126-AE9F-79DB3EDAC0F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceApp", "ServiceApp\ServiceApp.csproj", "{33A414F0-7E99-4126-AE9F-79DB3EDAC0F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeviceApp.Tests", "DeviceApp.Tests\DeviceApp.Tests.csproj", "{74A9997C-6690-46D7-94EA-6E8995D25DD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeviceApp.Tests", "DeviceApp.Tests\DeviceApp.Tests.csproj", "{74A9997C-6690-46D7-94EA-6E8995D25DD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
