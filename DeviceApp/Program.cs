@@ -18,6 +18,7 @@ namespace DeviceApp
 
             device.SendMessagAsync().GetAwaiter();            
             Console.ReadKey();
+            Console.WriteLine("hej");
         }
 
       
