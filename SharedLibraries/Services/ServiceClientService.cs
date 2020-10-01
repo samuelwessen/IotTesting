@@ -2,16 +2,16 @@
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 
-namespace ServiceApp
+namespace SharedLibraries.Services
 {
     public class ServiceClientService
     {
         private static ServiceClient serviceClient;
 
 
-        public ServiceClientService(string connetctionstring)
+        public ServiceClientService(string connectionstring)
         {
-            serviceClient = ServiceClient.CreateFromConnectionString(connetctionstring);
+            serviceClient = ServiceClient.CreateFromConnectionString("HostName=ec-win20-samuelw-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=DIJhSlhCzfs92bNMikOddSA5aqvJG06xdPcOLgyRHTA=");
         }
 
         public async Task<CloudToDeviceMethodResult> InvokeMethodAsync(string targetDevice, string methodName, string payload)
@@ -20,9 +20,10 @@ namespace ServiceApp
             methodInvocation.SetPayloadJson(payload);
 
             var response = await serviceClient.InvokeDeviceMethodAsync(targetDevice, methodInvocation);
-            return response;            
+            return response;
 
         }
+
 
     }
 }

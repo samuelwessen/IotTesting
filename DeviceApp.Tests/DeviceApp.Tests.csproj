@@ -14,8 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DeviceApp\DeviceApp.csproj" />
-    <ProjectReference Include="..\ServiceApp\ServiceApp.csproj" />
+    <ProjectReference Include="..\SharedLibraries\SharedLibraries.csproj" />
   </ItemGroup>
 
 </Project>
